@@ -1,0 +1,60 @@
+{
+  "name": "react_express_mongo_template",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.4",
+    "@testing-library/user-event": "^13.5.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongodb": "^4.5.0",
+    "mongoose": "^6.3.0",
+    "node-fetch": "^2.6.7",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "5.0.0",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "start-server:dev": "NODE_ENV=develop nodemon server/src/server.js",
+    "start-server:prod": "NODE_ENV=production node server/src/server.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "test:ci:summary": "NODE_ENV=test jest --coverage --selectProjects summary --forceExit",
+    "test:ci:unit": "NODE_ENV=test jest --selectProjects unit --forceExit",
+    "test:ci:blackbox": "NODE_ENV=test jest --selectProjects blackbox testMatch --forceExit",
+    "test:local:unit": "jest --coverage --selectProjects unit --forceExit",
+    "test:local:blackbox": "jest --coverage --selectProjects blackbox --forceExit",
+    "test:e2e": "cypress open",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.1",
+    "cypress": "^9.5.1",
+    "jest": "^27.5.1",
+    "jest-when": "^3.5.1",
+    "msw": "^0.39.1",
+    "nodemon": "^2.0.15",
+    "puppeteer": "^13.5.1"
+  }
+}
